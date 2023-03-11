@@ -5,7 +5,7 @@ const { SENDGRID_API_KEY } = process.env
 
 sendgridMail.setApiKey(SENDGRID_API_KEY)
 
-const data = {
+const email = {
     to: "howipa2757@gpipes.com",
     from: "mykhailohurak@gmail.com",
     subject: "Verify mail",
@@ -14,7 +14,7 @@ const data = {
 
 sendgridMail.send(email)
     .then(() => {
-        console.log("success")
+        console.log("Email send success")
     })
     .catch((error) => {
         console.log(error.message)
